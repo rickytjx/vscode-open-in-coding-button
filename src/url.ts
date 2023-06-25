@@ -13,7 +13,7 @@ const URL = {
     const repopath = await Utils.repo.getPath()
 
     if (!repopath)
-      return vscode.window.showErrorMessage('You have to open a git project before being able to open it in GitHub')
+      return vscode.window.showErrorMessage('You have to open a git project before being able to open it in CODING')
 
     const git = Utils.repo.getGit(repopath)
     const repourl = await Utils.repo.getUrl(git)
@@ -32,7 +32,7 @@ const URL = {
       const { activeTextEditor } = vscode.window
 
       if (!activeTextEditor)
-        return vscode.window.showErrorMessage('You have to open a file before being able to open it in GitHub')
+        return vscode.window.showErrorMessage('You have to open a file before being able to open it in CODING')
 
       const editorPath = activeTextEditor.document.uri.fsPath
 
