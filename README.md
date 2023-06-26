@@ -8,7 +8,7 @@
 
 Add a button to go to the CODING on the status bar.
 
-![Snipaste_2023-06-25_20-46-42](https://github.com/rickytjx/vscode-open-in-coding-button/assets/18324571/1d63db67-42ed-491f-8e14-f6f765de5304)
+![Snipaste_2023-06-26_18-06-03](https://github.com/rickytjx/vscode-open-in-coding-button/assets/18324571/dc1d7e1b-92ae-4c6c-8973-e50262a49488)
 
 ## Thanks
 Inspired by the following plugins
