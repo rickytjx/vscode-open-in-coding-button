@@ -1,5 +1,3 @@
-/* IMPORT */
-
 import * as path from 'node:path'
 import { bindAll, sortBy } from 'lodash-es'
 import absolute from 'absolute'
@@ -8,8 +6,6 @@ import simpleGit from 'simple-git'
 import { findUp } from 'find-up'
 import * as vscode from 'vscode'
 import Config from './config'
-
-/* UTILS */
 
 const Utils = {
 
@@ -45,13 +41,15 @@ const Utils = {
   },
 
   repo: {
+
     getGit(repopath: any) {
       return pify(bindAll(simpleGit(repopath), ['branch', 'getRemotes']))
     },
 
     async getHash(git: any) {
-      return (await git.revparse (['HEAD'])).trim ()
+      return (await git.revparse(['HEAD'])).trim()
     },
+
     async getPath() {
       const { activeTextEditor } = vscode.window
       const editorPath = activeTextEditor && activeTextEditor.document.uri.fsPath
@@ -61,17 +59,6 @@ const Utils = {
         return false
 
       return await Utils.folder.getWrapperPathOf(rootPath, editorPath || rootPath, '.git')
-    },
-
-    async getBranch(git: any) {
-      const config = Config.get()
-
-      if (!config.useLocalBranch)
-        return config.remote.branch
-
-      const branches = await git.branch()
-
-      return branches.current
     },
 
     async getUrl(git: any) {
@@ -99,7 +86,5 @@ const Utils = {
   },
 
 }
-
-/* EXPORT */
 
 export default Utils
