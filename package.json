@@ -31,6 +31,15 @@
     "onStartupFinished"
   ],
   "contributes": {
+    "icons": {
+      "coding-logo": {
+        "description": "CODING LOGO icon",
+        "default": {
+          "fontPath": "res/coding-fonts.woff",
+          "fontCharacter": "\\e6ba"
+        }
+      }
+    },
     "configuration": {
       "type": "object",
       "title": "Open in CODING - Configuration",

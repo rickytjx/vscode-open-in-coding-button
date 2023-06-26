@@ -10,7 +10,7 @@ export function activate({ subscriptions }: ExtensionContext) {
 
   const statusBar = window.createStatusBarItem(StatusBarAlignment.Left, 0)
   statusBar.command = command
-  statusBar.text = 'CODING'
+  statusBar.text = '$(coding-logo)'
   statusBar.tooltip = 'Open in CODING'
   statusBar.show()
 }
